@@ -35,5 +35,11 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-  }
+    filenames: {
+      css: ({ isDev }) => (isDev ? "[name].js" : "[name].[contenthash:7].css"),
+      app: ({ isDev }) => (isDev ? "[name].js" : "[name].[contenthash:7].js"),
+      chunk: ({ isDev }) => (isDev ? "[name].js" : "[name].[contenthash:7].js")
+    }
+  },
+  buildDir: 'nuxt-dist'
 }
