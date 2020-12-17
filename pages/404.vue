@@ -1,24 +1,13 @@
 <template>
   <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        nuxt_zy
-      </h1>
-    </div>
+    <h1>找不到页面～</h1>
   </div>
 </template>
-
 <script>
 export default {
-  head() {
-    return {
-      title: "首页"
-    };
-  }
+
 };
 </script>
-
 <style>
 .container {
   margin: 0 auto;
