@@ -41,5 +41,5 @@ export default {
       chunk: ({ isDev }) => (isDev ? "[name].js" : "[name].[contenthash:7].js")
     }
   },
-  buildDir: 'nuxt-dist'
+  // buildDir: 'nuxt-dist'
 }
