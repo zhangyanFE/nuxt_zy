@@ -1,8 +1,16 @@
 <template>
   <div class="layout">
-    <Nuxt />
+    <a-layout>
+      <a-layout-header>Header</a-layout-header>
+      <a-layout>
+        <a-layout-content><Nuxt /></a-layout-content>
+        <a-layout-sider>Sider</a-layout-sider>
+      </a-layout>
+      <a-layout-footer>Footer</a-layout-footer>
+    </a-layout>
   </div>
 </template>
+
 <style>
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -50,5 +58,24 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+.layout {
+  text-align: center;
+}
+.ant-layout-sider {
+  background: #3ba0e9;
+  color: #fff;
+  line-height: 120px;
+}
+.ant-layout-content {
+  background: rgba(16, 142, 233, 1);
+  color: #fff;
+  min-height: 120px;
+  line-height: 120px;
+}
+.ant-layout-header,
+.ant-layout-footer {
+  background: #7dbcea;
+  color: #fff;
 }
 </style>

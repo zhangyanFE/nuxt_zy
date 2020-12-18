@@ -3,7 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
-        nuxt_zy
+        nuxt(服务端渲染)
       </h1>
     </div>
   </div>
@@ -15,7 +15,14 @@ export default {
     return {
       title: "首页"
     };
-  }
+  },
+  beforeCreate() {},
+  created() {},
+  beforeMount() {},
+  mounted() {},
+  beforeUpdate() {},
+  beforeDestroy() {},
+  async asyncData({ params }) {}
 };
 </script>
 

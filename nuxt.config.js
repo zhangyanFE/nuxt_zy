@@ -29,7 +29,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    // '@/plugins/antd-ui'
+    '@/plugins/antd-ui'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -49,7 +49,34 @@ export default {
       css: ({ isDev }) => (isDev ? "[name].js" : "[name].[contenthash:7].css"),
       app: ({ isDev }) => (isDev ? "[name].js" : "[name].[contenthash:7].js"),
       chunk: ({ isDev }) => (isDev ? "[name].js" : "[name].[contenthash:7].js")
-    }
+    },
+    optimization: {
+      minimize: true,
+      splitChunks: {
+        chunks: 'all',
+        automaticNameDelimiter: '.',
+        name: undefined,
+        cacheGroups: {}
+      }
+    },
+    loaders: {
+      less: {
+        javascriptEnabled: true
+      }
+    },
+    babel: {
+      plugins: [
+        [
+          'import',
+          {
+            libraryName: 'ant-design-vue',
+            libraryDirectory: 'es',
+            style: true,
+          }
+        ]
+      ]
+    },
+    transpile: [/ant-design-vue/],
   },
   // buildDir: 'nuxt-dist'
 }

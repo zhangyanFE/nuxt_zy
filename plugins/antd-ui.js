@@ -1,4 +1,15 @@
-import Vue from 'vue'
-import Antd from 'ant-design-vue/lib'
+import Vue from "vue";
+import { Layout, Menu, List, Comment, Tooltip } from "ant-design-vue";
+const { Item } = Menu;
+const { Header, Footer, Content, Sider } = Layout;
 
-Vue.use(Antd)
+Vue.use(Layout)
+  .use(Sider)
+  .use(Header)
+  .use(Footer)
+  .use(Content)
+  .use(Menu)
+  .use(Item)
+  .use(List)
+  .use(Comment)
+  .use(Tooltip);
