@@ -1,11 +1,16 @@
 <template>
   <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        nuxt(服务端渲染)
-      </h1>
-    </div>
+    <p><nuxt-link to="/list">列表</nuxt-link></p>
+    <a-divider />
+    <p><nuxt-link to="/comment/list">约定式路由</nuxt-link></p>
+    <a-divider />
+    <p><nuxt-link to="/comment/123">动态路由(一级动态)</nuxt-link></p>
+    <p><nuxt-link to="/detail/detail--html-123">动态路由(多级动态)</nuxt-link></p>
+    <a-divider />
+    <p><nuxt-link to="/layout/basic">布局-basic</nuxt-link></p>
+    <p><nuxt-link to="/layout/fixedsider">布局-fixedsider</nuxt-link></p>
+    <p><nuxt-link to="/layout/leftsider">布局-leftsider</nuxt-link></p>
+    <p><nuxt-link to="/layout/rightsider">布局-rightsider</nuxt-link></p>
   </div>
 </template>
 
@@ -30,10 +35,11 @@ export default {
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
+  padding-top: 100px;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: center; */
+  /* text-align: center; */
 }
 
 .title {

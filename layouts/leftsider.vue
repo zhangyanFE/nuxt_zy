@@ -60,7 +60,7 @@ html {
   background-color: #35495e;
 }
 .layout {
-  text-align: center;
+  /* text-align: center; */
 }
 .ant-layout-sider {
   background: #3ba0e9;

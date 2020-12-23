@@ -1,17 +1,7 @@
 <template>
-  <a-list item-layout="horizontal" :data-source="data">
-    <a-list-item slot="renderItem" slot-scope="item">
-      <a-list-item-meta
-        description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-      >
-        <a slot="title" href="https://www.antdv.com/">{{ item.title }}</a>
-        <a-avatar
-          slot="avatar"
-          src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-        />
-      </a-list-item-meta>
-    </a-list-item>
-  </a-list>
+  <div>
+    <List :data="data" @ItemClick="handleItemClick" />
+  </div>
 </template>
 <script>
 const data = [
@@ -29,11 +19,16 @@ const data = [
   }
 ];
 export default {
-  layout: "basic",
+  // layout: "basic",
   data() {
     return {
       data
     };
+  },
+  methods: {
+    handleItemClick(item) {
+      console.log(item, "子组件通过事件通知父组件要更新状态");
+    }
   }
 };
 </script>

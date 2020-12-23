@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { Layout, Menu, List, Comment, Tooltip } from "ant-design-vue";
+import { Layout, Menu, List, Comment, Tooltip, Divider, Avatar } from "ant-design-vue";
 const { Item } = Menu;
 const { Header, Footer, Content, Sider } = Layout;
 
@@ -12,4 +12,4 @@ Vue.use(Layout)
   .use(Item)
   .use(List)
   .use(Comment)
-  .use(Tooltip);
+  .use(Tooltip).use(Divider).use(Avatar);

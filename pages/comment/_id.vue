@@ -5,7 +5,20 @@
 </template>
 <script>
 export default {
-  // 中间件
+  // 路由参数校验
+  // 如果正则返回false则会跳转到错误页面
+  validate({ params, query, store }) {
+    return /^\d+$/.test(params.id);
+  },
+
+  // 匿名中间件
+  middleware({ redirect, store }) {
+    if (!store.state.user.userInfo) {
+      return redirect("/login");
+    }
+  },
+
+  // 具名中间件
   middleware: ["authenticated", "user-agent"],
   // 计算属性
   computed: {
