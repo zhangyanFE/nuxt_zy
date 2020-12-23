@@ -1,6 +1,7 @@
 <template>
   <div>
-    <p>comment: {{ id }}</p>
+    <p>一级路由: {{ id }}</p>
+    <p>{{ JSON.stringify(post) }}</p>
   </div>
 </template>
 <script>
@@ -17,7 +18,6 @@ export default {
       return redirect("/login");
     }
   },
-
   // 具名中间件
   middleware: ["authenticated", "user-agent"],
   // 计算属性
@@ -47,8 +47,15 @@ export default {
     this.$store.dispatch("user/getData");
   },
   // 服务端请求获取数据
-  async asyncData({ params }) {
-    console.log("params", params);
+  async asyncData({ params, $axios, error }) {
+    const id = params.id;
+
+    try {
+      const post = await $axios.$get(`https://api.nuxtjs.dev/posts/${id}`);
+      return { post };
+    } catch (e) {
+      error(e); // Show the nuxt error page with the thrown error
+    }
   }
 };
 </script>

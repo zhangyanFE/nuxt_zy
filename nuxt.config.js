@@ -12,6 +12,12 @@ export default {
     ]
   },
 
+  loading: '~/components/LoadingBar.vue',
+  transition: {
+    name: 'layout',
+    mode: 'out-in'
+  },
+
   router: {
     extendRoutes(routes, resolve) {
       routes.push({
@@ -37,6 +43,7 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+    '@nuxtjs/axios'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)

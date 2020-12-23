@@ -8,9 +8,9 @@
     <a-divider />
     <p><nuxt-link to="/comment/list">约定式路由</nuxt-link></p>
     <a-divider />
-    <p><nuxt-link to="/comment/123">动态路由(一级动态)</nuxt-link></p>
+    <p><nuxt-link to="/comment/1">动态路由(一级动态)</nuxt-link></p>
     <p>
-      <nuxt-link to="/detail/detail--html-123">动态路由(多级动态)</nuxt-link>
+      <nuxt-link to="/detail/detail--html-1">动态路由(多级动态)</nuxt-link>
     </p>
     <a-divider />
     <p><nuxt-link to="/layout/basic">布局-basic</nuxt-link></p>
@@ -30,18 +30,25 @@ export default {
   beforeCreate() {},
   created() {},
   beforeMount() {},
-  mounted() {},
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 500);
+    });
+  },
   beforeUpdate() {},
   beforeDestroy() {},
-  async asyncData({ params }) {}
+  async asyncData({ params, $axios, error }) {
+
+  }
 };
 </script>
 
 <style>
-.logo{
+.logo {
   margin-bottom: 50px;
 }
-.logo p{
+.logo p {
   font-size: 18px;
   margin-top: 10px;
 }
