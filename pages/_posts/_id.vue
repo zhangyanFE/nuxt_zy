@@ -6,6 +6,11 @@
 </template>
 <script>
 export default {
-  // 动态路由例子
-}
+  // 动态路由
+  head() {
+    return {
+      title: "多级动态路由"
+    };
+  }
+};
 </script>

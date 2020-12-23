@@ -20,6 +20,19 @@ const data = [
 ];
 export default {
   // layout: "basic",
+  head() {
+    return {
+      title: "列表",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "My custom description"
+        }
+      ],
+      link: []
+    };
+  },
   data() {
     return {
       data

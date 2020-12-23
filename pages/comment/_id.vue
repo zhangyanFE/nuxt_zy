@@ -6,6 +6,11 @@
 </template>
 <script>
 export default {
+  head() {
+    return {
+      title: "评论动态数据"
+    };
+  },
   // 路由参数校验
   // 如果正则返回false则会跳转到错误页面
   validate({ params, query, store }) {

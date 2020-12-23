@@ -3,6 +3,11 @@
 </template>
 <script>
 export default {
-  layout: "basic"
+  layout: "basic",
+  head() {
+    return {
+      title: "基础布局",
+    };
+  },
 };
 </script>

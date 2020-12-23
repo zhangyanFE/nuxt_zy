@@ -26,6 +26,11 @@
 <script>
 import moment from "moment";
 export default {
+  head() {
+    return {
+      title: "评论列表"
+    };
+  },
   data() {
     return {
       data: [

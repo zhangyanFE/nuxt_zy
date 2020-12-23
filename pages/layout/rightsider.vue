@@ -3,6 +3,11 @@
 </template>
 <script>
 export default {
-    layout: 'rightsider'
+    layout: 'rightsider',
+    head() {
+    return {
+      title: "右侧slide布局"
+    };
+  }
 }
 </script>
