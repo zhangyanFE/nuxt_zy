@@ -1,11 +1,17 @@
 <template>
   <div class="container">
+    <div class="logo">
+      <Logo />
+      <p>nuxt 服务端渲染</p>
+    </div>
     <p><nuxt-link to="/list">列表</nuxt-link></p>
     <a-divider />
     <p><nuxt-link to="/comment/list">约定式路由</nuxt-link></p>
     <a-divider />
     <p><nuxt-link to="/comment/123">动态路由(一级动态)</nuxt-link></p>
-    <p><nuxt-link to="/detail/detail--html-123">动态路由(多级动态)</nuxt-link></p>
+    <p>
+      <nuxt-link to="/detail/detail--html-123">动态路由(多级动态)</nuxt-link>
+    </p>
     <a-divider />
     <p><nuxt-link to="/layout/basic">布局-basic</nuxt-link></p>
     <p><nuxt-link to="/layout/fixedsider">布局-fixedsider</nuxt-link></p>
@@ -32,6 +38,13 @@ export default {
 </script>
 
 <style>
+.logo{
+  margin-bottom: 50px;
+}
+.logo p{
+  font-size: 18px;
+  margin-top: 10px;
+}
 .container {
   margin: 0 auto;
   min-height: 100vh;
